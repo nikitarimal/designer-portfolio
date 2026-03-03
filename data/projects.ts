@@ -73,9 +73,8 @@ export const projects: Project[] = [
     category: "Travel & Tourism",
     year: "2026",
     description: "Booking platform for treks and adventures.",
-    image: "/projects/trek-landing.png",
+    image: "/projects/trek-booking.png",
     slug: "trek-booking",
-    // websiteLink: "https://www.baliyoventures.com/",
     figmaLink: "https://www.figma.com/design/r9jCabuDPRSLar6flg27Rb/Untitled?node-id=1-100356&t=HqB6ubi7GlQzteGV-1"
   },
    {
@@ -84,9 +83,8 @@ export const projects: Project[] = [
     category: "Hospitality & Leisure",
     year: "2026",
     description: "Personalized travel planning and concierge services.",
-    image: "/projects/peter-landing.png",
+    image: "/projects/peter-pans.png",
     slug: "peter-pans",
-    // websiteLink: "https://peterpans.com/",
-    figmaLink: "https://www.figma.com/design/r9jCabuDPRSLar6flg27Rb/Untitled?node-id=1-100356&t=HqB6ubi7GlQzteGV-1"
+    figmaLink: "https://www.figma.com/design/r9jCabuDPRSLar6flg27Rb/Untitled?node-id=1-164637&t=RwDgt8EVLiMMXwV2-1"
   },
 ];

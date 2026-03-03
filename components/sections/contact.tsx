@@ -29,7 +29,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-24 md:py-32 px-4 sm:px-8 lg:px-12 bg-black border-t border-white/5 overflow-hidden">
+    <section id="contact" className="pt-24 md:pt-32 pb-12 md:pb-16 px-4 sm:px-8 lg:px-12 bg-black border-t border-white/5 overflow-hidden">
       <div className="max-w-[1800px] mx-auto">
         <div className="grid lg:grid-cols-2 gap-24 lg:gap-40">
 
@@ -60,13 +60,13 @@ export default function Contact() {
                 <div className="space-y-4">
                   <p className="text-white/20">Socials</p>
                   <div className="flex flex-col gap-4">
-                    <a href="#" className="text-gray-400 hover:text-white transition-colors flex items-center gap-2 group">
+                    <a href="https://www.linkedin.com/in/nikitarimal1418/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors flex items-center gap-2 group">
                       LinkedIn <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
                     </a>
-                    <a href="#" className="text-gray-400 hover:text-white transition-colors flex items-center gap-2 group">
+                    <a href="https://www.instagram.com/noah.ux_/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors flex items-center gap-2 group">
                       Instagram <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
                     </a>
-                    <a href="#" className="text-gray-400 hover:text-white transition-colors flex items-center gap-2 group">
+                    <a href="https://github.com/nikitarimal" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors flex items-center gap-2 group">
                       GitHub <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
                     </a>
                   </div>
