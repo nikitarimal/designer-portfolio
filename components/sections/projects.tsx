@@ -65,48 +65,65 @@ export default function Projects() {
           animate={inView ? 'visible' : 'hidden'}
         >
           {projects.map((project: any) => (
-            <Link key={project.id} href={`/projects/${project.slug}`}>
-              <motion.div
-                className="group relative flex flex-col"
-                variants={itemVariants}
+            <motion.div
+              key={project.id}
+              className="group relative flex flex-col"
+              variants={itemVariants}
+            >
+              {/* Main Card linked to Figma */}
+              <a
+                href={project.figmaLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-[40px] border border-white/5 bg-[#0a0a0a] overflow-hidden p-3 md:p-4 transition-all duration-500 group-hover:border-white/10 group-hover:scale-[1.01]"
               >
-                {/* Card Container with Border */}
-                <div className="rounded-[40px] border border-white/5 bg-[#0a0a0a] overflow-hidden p-3 md:p-4 transition-all duration-500 group-hover:border-white/10 group-hover:scale-[1.01]">
-                  {/* Image Holder */}
-                  <div className="relative aspect-[4/3] rounded-[32px] overflow-hidden bg-zinc-900 mb-4 md:mb-6">
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      fill
-                      className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
-                      sizes="(max-w-768px) 100vw, 50vw"
-                    />
-                    {/* Darker Overlay on Image */}
-                    <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors duration-500" />
+                {/* Image Holder */}
+                <div className="relative aspect-[4/3] rounded-[32px] overflow-hidden bg-zinc-900 mb-4 md:mb-6">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-110"
+                    sizes="(max-w-768px) 100vw, 50vw"
+                  />
+                  {/* Figma Overlay Indicator */}
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                    <span className="bg-white text-black px-6 py-3 rounded-full text-xs font-black tracking-widest uppercase">
+                      View Project
+                    </span>
                   </div>
+                </div>
 
-                  {/* Footer with Title and Year */}
-                  <div className="mt-4 px-6 py-8 md:px-10 md:py-10 bg-black/40 rounded-[32px] border border-white/5 flex items-end justify-between transition-colors group-hover:bg-black/60">
-                    <div className="space-y-2">
-                      <h3 className="text-xl md:text-2xl font-black text-white tracking-widest uppercase truncate max-w-[200px] md:max-w-none">
-                        {project.title}
-                      </h3>
-                      <p className="text-gray-600 text-[10px] md:text-sm font-light uppercase tracking-[0.2em]">
-                        {project.category}
-                      </p>
-                    </div>
-                    <div className="text-[10px] md:text-xs font-mono px-6 py-2 border border-white/10 rounded-full text-zinc-500 uppercase tracking-[0.3em] group-hover:border-white/20 transition-colors">
+                {/* Footer with Title and Information */}
+                <div className="mt-4 px-6 py-8 md:px-10 md:py-10 bg-black/40 rounded-[32px] border border-white/5 flex items-end justify-between transition-colors group-hover:bg-black/60">
+                  <div className="space-y-3 flex-1">
+                    <h3 className="text-xl md:text-3xl font-black text-white tracking-widest uppercase truncate pr-4">
+                      {project.title}
+                    </h3>
+                    <p className="text-gray-400 text-[10px] md:text-xs font-medium uppercase tracking-[0.2em]">
+                      {project.category}
+                    </p>
+                  </div>
+                  <div className="flex gap-3 items-center shrink-0">
+                    {project.websiteLink && (
+                      <button
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          window.open(project.websiteLink, '_blank');
+                        }}
+                        className="text-[10px] md:text-xs font-mono px-6 py-2 border border-white/20 rounded-full text-white uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-all duration-300"
+                      >
+                        Visit Website
+                      </button>
+                    )}
+                    <div className="text-[10px] md:text-xs font-mono px-6 py-2 border border-white/10 rounded-full text-zinc-500 uppercase tracking-[0.3em] shrink-0">
                       {project.year}
                     </div>
                   </div>
                 </div>
-
-                {/* Floating "View" indicator on Hover */}
-                {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white text-black text-xs font-bold uppercase py-4 px-10 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-12 group-hover:translate-y-0 tracking-[0.3em] backdrop-blur-md">
-                  Discover
-                </div> */}
-              </motion.div>
-            </Link>
+              </a>
+            </motion.div>
           ))}
         </motion.div>
       </div>

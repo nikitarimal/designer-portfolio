@@ -6,6 +6,7 @@ import Footer from '@/components/footer'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
+import { motion } from 'framer-motion'
 import { notFound } from 'next/navigation'
 
 export default function ProjectDetail({ params }: { params: { slug: string } }) {
@@ -21,30 +22,38 @@ export default function ProjectDetail({ params }: { params: { slug: string } }) 
     <main className="min-h-screen bg-background">
       <Navbar />
 
-      {/* Hero Section */}
-      <section className="pt-32 pb-12 bg-card">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <Link href="/#projects" className="flex items-center gap-2 text-primary hover:opacity-80 transition-opacity mb-8">
-            <ArrowLeft size={20} />
-            Back to Projects
-          </Link>
-
-          <h1 className="font-serif text-5xl md:text-6xl font-bold text-foreground mb-4">
-            {project.title}
-          </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl">{project.description}</p>
-        </div>
-      </section>
-
-      {/* Main Image */}
-      <section className="relative h-96 md:h-screen">
+      {/* Immersive Hero Section with Image behind Navbar */}
+      <section className="relative h-[70vh] md:h-screen w-full overflow-hidden">
         <Image
           src={project.image}
           alt={project.title}
           fill
-          className="object-cover"
+          className="object-cover object-top"
           priority
         />
+        {/* Modern dark overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+        <div className="absolute inset-0 bg-black/20" />
+
+        <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex flex-col justify-end pb-20 md:pb-32">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <Link href="/#projects" className="inline-flex items-center gap-2 text-white/60 hover:text-white transition-colors mb-8 group">
+              <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
+              Back to Projects
+            </Link>
+
+            <h1 className="text-5xl md:text-8xl font-black text-white mb-6 uppercase tracking-tighter leading-none">
+              {project.title}
+            </h1>
+            <p className="text-xl md:text-2xl text-white/80 max-w-2xl font-light leading-relaxed">
+              {project.description}
+            </p>
+          </motion.div>
+        </div>
       </section>
 
       {/* Content Section */}
@@ -97,8 +106,34 @@ export default function ProjectDetail({ params }: { params: { slug: string } }) 
 
                   <div>
                     <p className="text-sm text-muted-foreground mb-1">Timeline</p>
-                    <p className="font-semibold text-foreground">6 Months</p>
+                    <p className="font-semibold text-foreground">2026</p>
                   </div>
+
+                  {project.websiteLink && (
+                    <div className="pt-4 border-t border-border mt-6">
+                      <a
+                        href={project.websiteLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full inline-flex items-center justify-center px-6 py-3 bg-white text-black font-bold rounded-full hover:bg-gray-200 transition-colors uppercase tracking-widest text-xs"
+                      >
+                        Visit Website
+                      </a>
+                    </div>
+                  )}
+
+                  {project.figmaLink && (
+                    <div className="pt-2">
+                      <a
+                        href={project.figmaLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full inline-flex items-center justify-center px-6 py-3 bg-zinc-900 text-white font-bold rounded-full hover:bg-zinc-800 transition-colors uppercase tracking-widest text-xs border border-white/5"
+                      >
+                        View Case Study
+                      </a>
+                    </div>
+                  )}
 
                   <div>
                     <p className="text-sm text-muted-foreground mb-3">Skills Applied</p>
@@ -123,14 +158,14 @@ export default function ProjectDetail({ params }: { params: { slug: string } }) 
 
             <div className="grid md:grid-cols-2 gap-8">
               {relatedProjects.map(proj => (
-                <Link key={proj.id} href={`/projects/${proj.slug}`}>
+                <a key={proj.id} href={proj.figmaLink} target="_blank" rel="noopener noreferrer">
                   <div className="group bg-background rounded-lg overflow-hidden border border-border hover:border-primary transition-all duration-300">
                     <div className="relative h-48 overflow-hidden">
                       <Image
                         src={proj.image}
                         alt={proj.title}
                         fill
-                        className="object-cover group-hover:scale-110 transition-transform duration-300"
+                        className="object-cover object-top group-hover:scale-110 transition-transform duration-300"
                       />
                     </div>
                     <div className="p-6">
@@ -140,7 +175,7 @@ export default function ProjectDetail({ params }: { params: { slug: string } }) 
                       </h3>
                     </div>
                   </div>
-                </Link>
+                </a>
               ))}
             </div>
           </div>

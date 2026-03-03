@@ -29,7 +29,7 @@ export default function Certifications() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-7xl md:text-9xl font-black text-white leading-none tracking-tighter mb-8 uppercase">
-              RECOGNITION<span className="text-blue-500">.</span>
+              RECOGNITION<span className="text-lavender-500">.</span>
             </h2>
             <p className="text-xl text-gray-500 font-light max-w-sm leading-relaxed uppercase tracking-[0.2em] font-mono">
               Validating my expertise through global standards.
@@ -47,17 +47,17 @@ export default function Certifications() {
                 animate={inView ? 'visible' : 'hidden'}
                 className="group relative"
               >
-                <div className="h-full border border-white/5 bg-[#0a0a0a] rounded-[32px] p-10 md:p-12 transition-all duration-500 group-hover:border-blue-500/30 group-hover:bg-[#0c0c0c] hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+                <div className="h-full border border-white/5 bg-[#0a0a0a] rounded-[32px] p-10 md:p-12 transition-all duration-500 group-hover:border-lavender-500/30 group-hover:bg-[#0c0c0c] hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
                   <div className="flex flex-col h-full space-y-8">
                     <div className="flex items-center justify-between">
-                      <div className="w-12 h-12 bg-blue-500/10 rounded-full flex items-center justify-center text-blue-500 group-hover:bg-blue-500 group-hover:text-white transition-all duration-500">
+                      <div className="w-12 h-12 bg-lavender-500/10 rounded-full flex items-center justify-center text-lavender-500 group-hover:bg-lavender-500 group-hover:text-white transition-all duration-500">
                         <Award size={20} />
                       </div>
                       <span className="text-[10px] font-mono text-zinc-700 tracking-[0.3em] uppercase">{cert.date}</span>
                     </div>
 
                     <div className="flex-1 space-y-4">
-                      <h3 className="text-2xl md:text-3xl font-bold text-white tracking-tight group-hover:text-blue-500 transition-colors duration-500 leading-tight">
+                      <h3 className="text-2xl md:text-3xl font-bold text-white tracking-tight group-hover:text-lavender-500 transition-colors duration-500 leading-tight">
                         {cert.title}
                       </h3>
                       <p className="text-gray-500 font-light text-lg uppercase tracking-widest">{cert.issuer}</p>

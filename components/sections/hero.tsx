@@ -28,8 +28,8 @@ export default function Hero() {
     <section id="home" className="relative w-full h-screen overflow-hidden bg-black">
       {/* Full width background image */}
       <Image
-        src="/hero.jpg"
-        alt="Nikita Rimal - UI/UX Designer"
+        src="/hero-bg.jpg"
+        alt="Nikita - UI/UX Designer"
         fill
         className="object-cover object-center"
         priority
@@ -51,17 +51,18 @@ export default function Hero() {
           variants={itemVariants}
         >
           <motion.h1
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-none"
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-[1.1]"
             variants={itemVariants}
           >
-            Nikita Rimal<br />UI/UX designer
+            Hi, I&apos;m <span className="text-lavender-500">Nikita</span><br />
+            <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-white/50">UI/UX designer</span>
           </motion.h1>
 
           <motion.p
-            className="text-lg md:text-2xl text-gray-200 mb-12 font-light italic"
+            className="text-1xl md:text-2xl lg:text-3xl text-gray-200 mb-12 font-light italic leading-tight max-w-4xl"
             variants={itemVariants}
           >
-            I design meaningful experiences every pixel tells a story.
+            &quot;A designer who judges a book by its cover&quot;
           </motion.p>
 
           <motion.a

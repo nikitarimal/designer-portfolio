@@ -1,40 +1,92 @@
-export const projects = [
+export interface Project {
+  id: number;
+  title: string;
+  category: string;
+  year: string;
+  description: string;
+  image: string;
+  slug: string;
+  websiteLink?: string;
+  figmaLink?: string;
+}
+
+export const projects: Project[] = [
   {
     id: 1,
-    title: "DOGMA GROUP UK",
-    category: "Web Design",
-    year: "2023",
-    description: "In a Digital World, We Deliver the Digital Innovation",
-    image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=1200",
-    slug: "dogma-group-uk"
+    title: "FREELANCE TRAVEL",
+    category: "Hospitality & Leisure",
+    year: "2026",
+    description: "Personalized travel planning and concierge services.",
+    image: "/projects/freelance-landing.png",
+    slug: "freelance-travel",
+    websiteLink: "https://freelancetravel.com/",
+    figmaLink: "https://freelancetravel.com/"
   },
+ 
   {
     id: 2,
-    title: "SHRADDHA - INTERIOR DESIGNER",
-    category: "Web Design",
-    year: "2024",
-    description: "Crafting a Beautiful Life through intuitive design",
-    image: "https://images.unsplash.com/photo-1481487196290-c152efe083f5?w=1200",
-    slug: "shraddha-interior"
+    title: "REFFERO",
+    category: "Software as a Service",
+    year: "2026",
+    description: "Innovation in referral and networking platforms.",
+    image: "/projects/reffero.png",
+    slug: "reffero",
+    websiteLink: "https://reffero.com/",
+    figmaLink: "https://www.figma.com/design/r9jCabuDPRSLar6flg27Rb/Untitled?node-id=1-9608&t=HqB6ubi7GlQzteGV-1"
   },
   {
     id: 3,
-    title: "FINTECH MOBILE APP",
-    category: "App Design",
-    year: "2024",
-    description: "Seamless banking experience for the modern user",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200",
-    slug: "fintech-app"
+    title: "SYLLABUSAI",
+    category: "Education Technology",
+    year: "2026",
+    description: "AI-powered educational infrastructure.",
+    image: "/projects/syllabusai.png",
+    slug: "syllabusai",
+    websiteLink: "https://syllabusai.com/",
+    figmaLink: "https://www.figma.com/design/r9jCabuDPRSLar6flg27Rb/Untitled?node-id=1-29971&t=HqB6ubi7GlQzteGV-1"
+  },
+  // {
+  //   id: 4,
+  //   title: "SYANGDEN HOLIDAYS",
+  //   category: "Travel & Tourism",
+  //   year: "2026",
+  //   description: "Premium holiday experiences in the Himalayas.",
+  //   image: "/projects/syangden-holidays.png",
+  //   slug: "syangden-holidays",
+  //   websiteLink: "https://syangdenholidays.com/",
+  //   figmaLink: "https://figma.com/file/placeholder4"
+  // },
+  {
+    id: 5,
+    title: "BALIYO VENTURES",
+    category: "Venture Capital",
+    year: "2026",
+    description: "Strategic investments and venture building.",
+    image: "/projects/baliyo-landing.png",
+    slug: "baliyo-ventures",
+    websiteLink: "https://www.baliyoventures.com/",
+    figmaLink: "https://www.figma.com/design/r9jCabuDPRSLar6flg27Rb/Untitled?node-id=1-58061&t=HqB6ubi7GlQzteGV-1"
   },
   {
-    id: 4,
-    title: "E-COMMERCE BRANDING",
-    category: "Visual Design",
-    year: "2023",
-    description: "Building digital identities for luxury brands",
-    image: "https://images.unsplash.com/photo-1460925895917-adf4ea0db900?w=1200",
-    slug: "ecommerce-branding"
-  }
+    id: 6,
+    title: "TREK BOOKING",
+    category: "Travel & Tourism",
+    year: "2026",
+    description: "Booking platform for treks and adventures.",
+    image: "/projects/trek-landing.png",
+    slug: "trek-booking",
+    // websiteLink: "https://www.baliyoventures.com/",
+    figmaLink: "https://www.figma.com/design/r9jCabuDPRSLar6flg27Rb/Untitled?node-id=1-100356&t=HqB6ubi7GlQzteGV-1"
+  },
+   {
+    id: 11,
+    title: "PETER PANS",
+    category: "Hospitality & Leisure",
+    year: "2026",
+    description: "Personalized travel planning and concierge services.",
+    image: "/projects/peter-landing.png",
+    slug: "peter-pans",
+    // websiteLink: "https://peterpans.com/",
+    figmaLink: "https://www.figma.com/design/r9jCabuDPRSLar6flg27Rb/Untitled?node-id=1-100356&t=HqB6ubi7GlQzteGV-1"
+  },
 ];
-
-export type Project = typeof projects[0];

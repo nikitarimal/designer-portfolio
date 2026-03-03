@@ -42,7 +42,7 @@ export default function Contact() {
               viewport={{ once: true }}
             >
               <h2 className="text-7xl md:text-9xl font-black text-white leading-none tracking-tighter mb-8">
-                LET'S<br />WORK<br />TOGETHER<span className="text-blue-500">.</span>
+                LET'S<br />WORK<br />TOGETHER<span className="text-lavender-500">.</span>
               </h2>
               <p className="text-xl md:text-2xl text-gray-500 font-light max-w-md leading-relaxed">
                 Have a project in mind or just want to say hi? I'm always open to discussing new opportunities and creative ideas.
@@ -74,8 +74,8 @@ export default function Contact() {
                 <div className="space-y-4">
                   <p className="text-white/20">Contact</p>
                   <div className="flex flex-col gap-4">
-                    <a href="mailto:hello@nikitarimal.com" className="text-gray-400 hover:text-white transition-colors truncate">
-                      hello@nikitarimal.com
+                    <a href="mailto:nikitarimal1418@gmail.com" className="text-gray-400 hover:text-white transition-colors truncate">
+                      nikitarimal1418@gmail.com
                     </a>
                     <p className="text-gray-600">Kathmandu, Nepal</p>
                   </div>
@@ -94,7 +94,7 @@ export default function Contact() {
           >
             <form onSubmit={handleSubmit} className="space-y-12">
               <div className="group relative">
-                <p className="text-[10px] font-mono uppercase tracking-[0.5em] text-white/20 mb-4 group-focus-within:text-blue-500 transition-colors">01. Your Name</p>
+                <p className="text-[10px] font-mono uppercase tracking-[0.5em] text-white/20 mb-4 group-focus-within:text-lavender-500 transition-colors">01. Your Name</p>
                 <input
                   type="text"
                   name="name"
@@ -102,25 +102,25 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   placeholder="Nikita Rimal"
-                  className="w-full bg-transparent border-b border-white/10 py-6 text-2xl md:text-3xl text-white font-light focus:outline-none focus:border-blue-500 transition-colors placeholder:text-gray-800"
+                  className="w-full bg-transparent border-b border-white/10 py-6 text-2xl md:text-3xl text-white font-light focus:outline-none focus:border-lavender-500 transition-colors placeholder:text-white/30"
                 />
               </div>
 
               <div className="group relative">
-                <p className="text-[10px] font-mono uppercase tracking-[0.5em] text-white/20 mb-4 group-focus-within:text-blue-500 transition-colors">02. Your Email</p>
+                <p className="text-[10px] font-mono uppercase tracking-[0.5em] text-white/20 mb-4 group-focus-within:text-lavender-500 transition-colors">02. Your Email</p>
                 <input
                   type="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  placeholder="hello@nikitarimal.com"
-                  className="w-full bg-transparent border-b border-white/10 py-6 text-2xl md:text-3xl text-white font-light focus:outline-none focus:border-blue-500 transition-colors placeholder:text-gray-800"
+                  placeholder="nikitarimal1418@gmail.com"
+                  className="w-full bg-transparent border-b border-white/10 py-6 text-2xl md:text-3xl text-white font-light focus:outline-none focus:border-lavender-500 transition-colors placeholder:text-white/30"
                 />
               </div>
 
               <div className="group relative">
-                <p className="text-[10px] font-mono uppercase tracking-[0.5em] text-white/20 mb-4 group-focus-within:text-blue-500 transition-colors">03. Your Message</p>
+                <p className="text-[10px] font-mono uppercase tracking-[0.5em] text-white/20 mb-4 group-focus-within:text-lavender-500 transition-colors">03. Your Message</p>
                 <textarea
                   name="message"
                   value={formData.message}
@@ -128,7 +128,7 @@ export default function Contact() {
                   required
                   rows={4}
                   placeholder="How can I help you?"
-                  className="w-full bg-transparent border-b border-white/10 py-6 text-2xl md:text-3xl text-white font-light focus:outline-none focus:border-blue-500 transition-colors resize-none placeholder:text-gray-800"
+                  className="w-full bg-transparent border-b border-white/10 py-6 text-2xl md:text-3xl text-white font-light focus:outline-none focus:border-lavender-500 transition-colors resize-none placeholder:text-white/30"
                 />
               </div>
 
@@ -136,12 +136,12 @@ export default function Contact() {
                 <motion.button
                   type="submit"
                   disabled={isSubmitted}
-                  className="relative group overflow-hidden w-full md:w-auto px-16 py-8 bg-white text-black text-xs font-black uppercase tracking-[0.4em] rounded-full hover:bg-blue-600 hover:text-white transition-all duration-700"
+                  className="relative group overflow-hidden w-full md:w-auto px-16 py-8 bg-white text-black text-xs font-black uppercase tracking-[0.4em] rounded-full hover:bg-lavender-600 hover:text-white transition-all duration-700"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   <span className="relative z-10">{isSubmitted ? 'Message Sent' : 'Send Message'}</span>
-                  <div className="absolute inset-0 bg-blue-600 translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-[0.16,1,0.3,1]" />
+                  <div className="absolute inset-0 bg-lavender-600 translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-[0.16,1,0.3,1]" />
                 </motion.button>
               </div>
             </form>

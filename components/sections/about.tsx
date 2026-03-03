@@ -10,7 +10,7 @@ export default function About() {
   })
 
   return (
-    <section id="about" ref={ref} className="py-24 md:py-32 px-4 sm:px-8 lg:px-12 bg-black border-t border-white/5 overflow-hidden">
+    <section id="about" ref={ref} className="pt-12 md:pt-16 pb-12 md:pb-16 px-4 sm:px-8 lg:px-12 bg-black border-t border-white/5 overflow-hidden">
       <div className="max-w-[1800px] mx-auto">
         <div className="grid lg:grid-cols-[1fr,2.5fr] gap-24 lg:gap-40 items-start">
 
@@ -22,16 +22,16 @@ export default function About() {
               transition={{ duration: 1, ease: 'easeOut' }}
             >
               <h2 className="text-8xl sm:text-9xl font-black text-white leading-none tracking-tighter mb-8">
-                ABOUT<span className="text-blue-500">.</span>
+                ABOUT<span className="text-lavender-500">.</span>
               </h2>
-              <p className="text-gray-500 text-xl font-mono uppercase tracking-[0.3em] max-w-xs">
+              {/* <p className="text-gray-500 text-xl font-mono uppercase tracking-[0.3em] max-w-xs">
                 Designing Intentional Digital Experiences
-              </p>
+              </p> */}
             </motion.div>
           </div>
 
           {/* About Content */}
-          <div className="space-y-32">
+          <div className="space-y-20 md:space-y-24">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
@@ -39,18 +39,18 @@ export default function About() {
               className="space-y-12"
             >
               <h3 className="text-4xl md:text-6xl font-black text-white leading-tight tracking-tight max-w-4xl">
-                I BELIEVE THAT GREAT DESIGN IS NOT JUST HOW IT LOOKS, BUT HOW IT WORKS FOR PEOPLE.
+                GREAT DESIGN IS NOT JUST HOW IT LOOKS, BUT HOW IT WORKS FOR PEOPLE.
               </h3>
 
               <div className="grid md:grid-cols-2 gap-16 md:gap-32">
                 <div className="space-y-6">
-                  <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-blue-500">01. Who I Am</p>
+                  <p className="text-xs md:text-sm font-mono uppercase tracking-[0.3em] text-lavender-500">01. Who I Am</p>
                   <p className="text-xl md:text-2xl text-gray-400 font-light leading-relaxed">
                     I'm a passionate UI/UX designer obsessed with creating digital experiences that solve real problems. With a focus on user-centric design, I help brands reimagine their digital presence and connect with users in meaningful ways.
                   </p>
                 </div>
                 <div className="space-y-6">
-                  <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-blue-500">02. My Philosophy</p>
+                  <p className="text-xs md:text-sm font-mono uppercase tracking-[0.3em] text-lavender-500">02. My Philosophy</p>
                   <p className="text-xl md:text-2xl text-gray-400 font-light leading-relaxed">
                     My approach combines creative storytelling, human-centered research, and meticulous design execution. I believe that great design comes from understanding people deeply and solving problems elegantly.
                   </p>
@@ -59,14 +59,14 @@ export default function About() {
             </motion.div>
 
             {/* Second Row of Content */}
-            <motion.div
+              <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 1, delay: 0.4 }}
-              className="grid md:grid-cols-2 gap-16 md:gap-32 pt-32 border-t border-white/5"
+              className="grid md:grid-cols-2 gap-16 md:gap-32 pt-20 md:pt-24 border-t border-white/5"
             >
               <div className="space-y-6">
-                <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-blue-500">03. What I Do</p>
+                <p className="text-xs md:text-sm font-mono uppercase tracking-[0.3em] text-lavender-500">03. What I Do</p>
                 <div className="space-y-4">
                   <p className="text-xl md:text-2xl text-gray-300 font-medium">
                     Strategy. Interface. Interaction.
@@ -77,7 +77,7 @@ export default function About() {
                 </div>
               </div>
               <div className="space-y-6">
-                <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-blue-500">04. Current Focus</p>
+                <p className="text-xs md:text-sm font-mono uppercase tracking-[0.3em] text-lavender-500">04. Current Focus</p>
                 <div className="space-y-4">
                   <p className="text-xl md:text-2xl text-gray-300 font-medium">
                     Innovation & Scalability

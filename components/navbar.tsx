@@ -1,24 +1,39 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   const navItems = [
     { label: 'About', href: '#about' },
+    { label: 'Skills', href: '#skills' },
     { label: 'Projects', href: '#projects' },
-    { label: 'Certifications', href: '#certifications' },
-    { label: 'Contact', href: '#contact' },
-    { label: 'Experience', href: '#experience' }
+    { label: 'Graphics', href: '#graphics' },
+    // { label: 'Certifications', href: '#certifications' },
+    { label: 'Experience', href: '#experience' },
+    { label: 'Contact', href: '#contact' }
   ]
 
   return (
-    <nav className="fixed top-0 w-full bg-black/80 backdrop-blur-md border-b border-gray-900 z-50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 flex items-center justify-between">
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+      scrolled 
+        ? 'bg-black/90 backdrop-blur-md border-b border-white/5 py-4' 
+        : 'bg-transparent border-b border-transparent py-6'
+    }`}>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between">
         <Link href="/" className="text-3xl font-bold text-white uppercase tracking-tighter">
           NR
         </Link>
