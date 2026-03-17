@@ -38,7 +38,7 @@ export default function Projects() {
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 1, ease: 'easeOut' }}
           >
-            <h2 className="text-8xl sm:text-9xl font-black text-white leading-none tracking-tighter">
+            <h2 className="text-6xl sm:text-8xl md:text-9xl font-black text-white leading-none tracking-tighter">
               FEATURED<br />WORK
             </h2>
           </motion.div>
@@ -84,7 +84,7 @@ export default function Projects() {
                     alt={project.title}
                     fill
                     className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-110"
-                    sizes="(max-w-768px) 100vw, 50vw"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                   {/* Figma Overlay Indicator */}
                   <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
@@ -95,8 +95,8 @@ export default function Projects() {
                 </div>
 
                 {/* Footer with Title and Information */}
-                <div className="mt-4 px-6 py-8 md:px-10 md:py-10 bg-black/40 rounded-[32px] border border-white/5 flex items-end justify-between transition-colors group-hover:bg-black/60">
-                  <div className="space-y-3 flex-1">
+                <div className="mt-4 px-6 py-8 md:px-10 md:py-10 bg-black/40 rounded-[32px] border border-white/5 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-6 transition-colors group-hover:bg-black/60">
+                  <div className="space-y-3 flex-1 w-full">
                     <h3 className="text-xl md:text-3xl font-black text-white tracking-widest uppercase truncate pr-4">
                       {project.title}
                     </h3>
@@ -104,7 +104,7 @@ export default function Projects() {
                       {project.category}
                     </p>
                   </div>
-                  <div className="flex gap-3 items-center shrink-0">
+                  <div className="flex gap-3 items-center shrink-0 w-full sm:w-auto overflow-x-auto sm:overflow-visible pb-2 sm:pb-0">
                     {project.websiteLink && (
                       <button
                         onClick={(e) => {
@@ -112,12 +112,12 @@ export default function Projects() {
                           e.stopPropagation();
                           window.open(project.websiteLink, '_blank');
                         }}
-                        className="text-[10px] md:text-xs font-mono px-6 py-2 border border-white/20 rounded-full text-white uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-all duration-300"
+                        className="text-[10px] md:text-xs font-mono px-4 md:px-6 py-2 border border-white/20 rounded-full text-white uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-all duration-300 whitespace-nowrap"
                       >
                         Visit Website
                       </button>
                     )}
-                    <div className="text-[10px] md:text-xs font-mono px-6 py-2 border border-white/10 rounded-full text-zinc-500 uppercase tracking-[0.3em] shrink-0">
+                    <div className="text-[10px] md:text-xs font-mono px-4 md:px-6 py-2 border border-white/10 rounded-full text-zinc-500 uppercase tracking-[0.3em] shrink-0 whitespace-nowrap">
                       {project.year}
                     </div>
                   </div>

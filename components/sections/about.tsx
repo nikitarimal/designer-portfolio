@@ -21,7 +21,7 @@ export default function About() {
               animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
               transition={{ duration: 1, ease: 'easeOut' }}
             >
-              <h2 className="text-8xl sm:text-9xl font-black text-white leading-none tracking-tighter mb-8">
+              <h2 className="text-6xl sm:text-8xl md:text-9xl font-black text-white leading-none tracking-tighter mb-8">
                 ABOUT<span className="text-lavender-500">.</span>
               </h2>
               {/* <p className="text-gray-500 text-xl font-mono uppercase tracking-[0.3em] max-w-xs">
@@ -38,7 +38,7 @@ export default function About() {
               transition={{ duration: 1, delay: 0.2 }}
               className="space-y-12"
             >
-              <h3 className="text-4xl md:text-6xl font-black text-white leading-tight tracking-tight max-w-4xl">
+              <h3 className="text-3xl sm:text-4xl md:text-6xl font-black text-white leading-tight tracking-tight max-w-4xl">
                 GREAT DESIGN IS NOT JUST HOW IT LOOKS, BUT HOW IT WORKS FOR PEOPLE.
               </h3>
 

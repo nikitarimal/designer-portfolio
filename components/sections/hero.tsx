@@ -51,11 +51,11 @@ export default function Hero() {
           variants={itemVariants}
         >
           <motion.h1
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-[1.1]"
+            className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-[1.1]"
             variants={itemVariants}
           >
             Hi, I&apos;m <span className="text-lavender-500">Nikita</span><br />
-            <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-white/50">UI/UX designer</span>
+            <span className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-white/50">UI/UX designer</span>
           </motion.h1>
 
           <motion.p

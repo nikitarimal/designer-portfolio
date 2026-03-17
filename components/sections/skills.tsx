@@ -37,7 +37,7 @@ export default function Skills() {
                         animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h2 className="text-7xl md:text-9xl font-black text-white leading-none tracking-tighter mb-8">
+                        <h2 className="text-6xl sm:text-8xl md:text-9xl font-black text-white leading-none tracking-tighter mb-8">
                             CORE<br />SKILLS<span className="text-lavender-500">.</span>
                         </h2>
                         <p className="text-xl text-gray-500 font-light max-w-sm leading-relaxed uppercase tracking-widest font-mono">
@@ -50,7 +50,7 @@ export default function Skills() {
                         variants={containerVariants}
                         initial="hidden"
                         animate={inView ? 'visible' : 'hidden'}
-                        className="grid sm:grid-cols-2 gap-x-20 gap-y-32"
+                        className="grid sm:grid-cols-2 gap-x-20 gap-y-16 md:gap-y-32"
                     >
                         {skills.map((category) => (
                             <motion.div key={category.id} variants={itemVariants} className="space-y-10 group">

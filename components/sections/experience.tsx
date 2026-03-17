@@ -29,7 +29,7 @@ export default function Experience() {
               transition={{ duration: 1 }}
               className="space-y-12"
             >
-              <h2 className="text-7xl md:text-8xl lg:text-9xl font-black text-white leading-[0.8] tracking-tighter uppercase break-all sm:break-normal lg:whitespace-pre-line">
+              <h2 className="text-6xl sm:text-8xl md:text-9xl font-black text-white leading-[0.8] tracking-tighter uppercase break-all sm:break-normal lg:whitespace-pre-line">
                 EXP<br />ERI<br />ENCE<span className="text-lavender-500">.</span>
               </h2>
 
@@ -64,7 +64,7 @@ export default function Experience() {
                   {/* Period & Role */}
                   <div className="flex flex-col md:flex-row md:items-baseline justify-between gap-8">
                     <div className="space-y-4">
-                      <h3 className="text-4xl md:text-6xl font-black text-white tracking-tight group-hover:text-lavender-500 transition-colors duration-500 leading-[1.1]">
+                      <h3 className="text-3xl md:text-6xl font-black text-white tracking-tight group-hover:text-lavender-500 transition-colors duration-500 leading-[1.1]">
                         {exp.role}
                       </h3>
                       <p className="text-2xl md:text-3xl text-gray-500 font-light italic">

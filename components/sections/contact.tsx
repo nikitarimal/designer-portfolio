@@ -41,7 +41,7 @@ export default function Contact() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-7xl md:text-9xl font-black text-white leading-none tracking-tighter mb-8">
+              <h2 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-white leading-none tracking-tighter mb-8">
                 LET'S<br />WORK<br />TOGETHER<span className="text-lavender-500">.</span>
               </h2>
               <p className="text-xl md:text-2xl text-gray-500 font-light max-w-md leading-relaxed">

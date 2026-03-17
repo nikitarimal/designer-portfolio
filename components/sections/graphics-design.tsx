@@ -16,7 +16,7 @@ export default function GraphicsDesign() {
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 1, ease: 'easeOut' }}
           >
-            <h2 className="text-7xl sm:text-9xl font-black text-white leading-none tracking-tighter uppercase break-all sm:break-normal">
+            <h2 className="text-6xl sm:text-8xl md:text-9xl font-black text-white leading-none tracking-tighter uppercase break-all sm:break-normal">
               GRAPHICS<br />DESIGN<span className="text-secondary-500">.</span>
             </h2>
           </motion.div>
@@ -39,7 +39,7 @@ export default function GraphicsDesign() {
               href="https://drive.google.com/drive/folders/1DPX13i6LhnQHmwhooIeJuzCnFPoLd-qP" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="group relative inline-flex items-center gap-4 px-12 py-6 bg-white text-black font-black uppercase tracking-[0.3em] rounded-full hover:bg-zinc-800 hover:text-white transition-all duration-700 overflow-hidden"
+              className="group relative inline-flex items-center gap-4 px-8 md:px-12 py-4 md:py-6 bg-white text-black font-black uppercase tracking-[0.3em] rounded-full hover:bg-zinc-800 hover:text-white transition-all duration-700 overflow-hidden"
             >
               <span className="relative z-10 flex items-center gap-3">
                 View Portfolio <ArrowUpRight size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
