@@ -51,32 +51,32 @@ export const experience = [
       "Maintained and expanded the internal design system"
     ]
   },
-  {
-    id: 5,
-    role: "UI/UX Intern",
-    company: "Truenary Solutions",
-    location: "Heṭauā, Nārāyanī, Nepal (On-site)",
-    period: "Nov 2023 – Mar 2024",
-    description: "Gained hands-on experience in professional design workflows.",
-    highlights: [
-      "Assisted senior designers in creating wireframes and mockups",
-      "Participated in stakeholder meetings and feedback sessions",
-      "Learned industry-standard design tools and accessibility best practices"
-    ]
-  },
-  {
-    id: 6,
-    role: "Graphics Designer",
-    company: "Mangobyte Digital",
-    location: "Kathmandu, Nepal",
-    period: "November 2023 – April 2024",
-    description: "Delivered high-impact visual content for digital marketing.",
-    highlights: [
-      "Designed social media graphics and advertising banners",
-      "Created pitch decks and presentation materials for clients",
-      "Collaborated with the content team for visual storytelling"
-    ]
-  },
+  // {
+  //   id: 5,
+  //   role: "UI/UX Intern",
+  //   company: "Truenary Solutions",
+  //   location: "Heṭauā, Nārāyanī, Nepal (On-site)",
+  //   period: "Nov 2023 – Mar 2024",
+  //   description: "Gained hands-on experience in professional design workflows.",
+  //   highlights: [
+  //     "Assisted senior designers in creating wireframes and mockups",
+  //     "Participated in stakeholder meetings and feedback sessions",
+  //     "Learned industry-standard design tools and accessibility best practices"
+  //   ]
+  // },
+  // {
+  //   id: 6,
+  //   role: "Graphics Designer",
+  //   company: "Mangobyte Digital",
+  //   location: "Kathmandu, Nepal",
+  //   period: "November 2023 – April 2024",
+  //   description: "Delivered high-impact visual content for digital marketing.",
+  //   highlights: [
+  //     "Designed social media graphics and advertising banners",
+  //     "Created pitch decks and presentation materials for clients",
+  //     "Collaborated with the content team for visual storytelling"
+  //   ]
+  // },
   {
     id: 7,
     role: "Graphics Designer",
