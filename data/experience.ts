@@ -4,7 +4,7 @@ export const experience = [
     role: "User Experience Designer",
     company: "Truenary Solutions",
     location: "Maitidevi, Kathmandu",
-    period: "March 2025 – Present",
+    period: "March 2024 – March 2026",
     description: "Leading UX strategies and designing intuitive digital solutions.",
     highlights: [
       "Crafting user-centric designs for diverse digital platforms",
@@ -30,7 +30,7 @@ export const experience = [
     role: "UI/UX & Graphics Designer",
     company: "Baliyo Ventures",
     location: "Kathmandu, Nepal",
-    period: "October 2024 – March 2025",
+    period: "October 2023 – March 2024",
     description: "Balanced visual identity with functional interface design.",
     highlights: [
       "Designed comprehensive UI sets and marketing collateral",
@@ -43,7 +43,7 @@ export const experience = [
     role: "UI/UX Designer",
     company: "Yuwasoft Technologies",
     location: "Kathmandu, Nepal",
-    period: "January 2024 – January 2025",
+    period: "January 2023 – October 2023",
     description: "Focused on web and mobile application interface design.",
     highlights: [
       "Designed end-to-end user flows for enterprise software",
