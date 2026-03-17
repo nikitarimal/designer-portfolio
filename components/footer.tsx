@@ -1,6 +1,6 @@
 'use client'
 
-import { Mail, Github, Linkedin, Twitter } from 'lucide-react'
+import { Mail, Github, Linkedin, Instagram } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 export default function Footer() {
@@ -36,32 +36,38 @@ export default function Footer() {
             <h4 className="font-bold text-white mb-6 uppercase tracking-widest text-sm">Follow</h4>
             <div className="flex gap-6">
               <motion.a 
-                href="#" 
+                href="mailto:nikitarimal1418@gmail.com" 
                 className="text-gray-400 hover:text-white transition-colors"
                 whileHover={{ scale: 1.1, rotate: 5 }}
               >
                 <Mail size={20} />
               </motion.a>
               <motion.a 
-                href="#" 
+                href="https://www.linkedin.com/in/nikitarimal1418/" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
                 whileHover={{ scale: 1.1, rotate: 5 }}
               >
                 <Linkedin size={20} />
               </motion.a>
               <motion.a 
-                href="#" 
+                href="https://github.com/nikitarimal" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
                 whileHover={{ scale: 1.1, rotate: 5 }}
               >
                 <Github size={20} />
               </motion.a>
               <motion.a 
-                href="#" 
+                href="https://www.instagram.com/noah.ux_/" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
                 whileHover={{ scale: 1.1, rotate: 5 }}
               >
-                <Twitter size={20} />
+                <Instagram size={20} />
               </motion.a>
             </div>
           </div>

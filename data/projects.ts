@@ -22,18 +22,39 @@ export const projects: Project[] = [
     websiteLink: "https://freelancetravel.com/",
     figmaLink: "https://freelancetravel.com/"
   },
- 
   {
-    id: 2,
-    title: "REFFERO",
-    category: "Software as a Service",
+    id: 11,
+    title: "PETER PANS",
+    category: "Hospitality & Leisure",
     year: "2026",
-    description: "Innovation in referral and networking platforms.",
-    image: "/projects/reffero.png",
-    slug: "reffero",
-    websiteLink: "https://reffero.com/",
-    figmaLink: "https://www.figma.com/design/r9jCabuDPRSLar6flg27Rb/Untitled?node-id=1-9608&t=HqB6ubi7GlQzteGV-1"
+    description: "Personalized travel planning and concierge services.",
+    image: "/projects/peter-pans.png",
+    slug: "peter-pans",
+    websiteLink: "https://peterpans.com/",
+    figmaLink: "https://play.google.com/store/apps/details?id=com.peterpans.app"
   },
+   {
+    id: 5,
+    title: "BALIYO VENTURES",
+    category: "Venture Capital",
+    year: "2026",
+    description: "Strategic investments and venture building.",
+    image: "/projects/baliyo-landing.png",
+    slug: "baliyo-ventures",
+    websiteLink: "https://www.baliyoventures.com/",
+    figmaLink: "https://www.baliyoventures.com/"
+  },
+  // {
+  //   id: 2,
+  //   title: "REFFERO",
+  //   category: "Software as a Service",
+  //   year: "2026",
+  //   description: "Innovation in referral and networking platforms.",
+  //   image: "/projects/reffero.png",
+  //   slug: "reffero",
+  //   websiteLink: "https://reffero.com/",
+  //   figmaLink: "https://www.figma.com/design/r9jCabuDPRSLar6flg27Rb/Untitled?node-id=1-9608&t=HqB6ubi7GlQzteGV-1"
+  // },
   {
     id: 3,
     title: "SYLLABUSAI",
@@ -42,7 +63,6 @@ export const projects: Project[] = [
     description: "AI-powered educational infrastructure.",
     image: "/projects/syllabusai.png",
     slug: "syllabusai",
-    websiteLink: "https://syllabusai.com/",
     figmaLink: "https://www.figma.com/design/r9jCabuDPRSLar6flg27Rb/Untitled?node-id=1-29971&t=HqB6ubi7GlQzteGV-1"
   },
   // {
@@ -56,17 +76,7 @@ export const projects: Project[] = [
   //   websiteLink: "https://syangdenholidays.com/",
   //   figmaLink: "https://figma.com/file/placeholder4"
   // },
-  {
-    id: 5,
-    title: "BALIYO VENTURES",
-    category: "Venture Capital",
-    year: "2026",
-    description: "Strategic investments and venture building.",
-    image: "/projects/baliyo-landing.png",
-    slug: "baliyo-ventures",
-    websiteLink: "https://www.baliyoventures.com/",
-    figmaLink: "https://www.figma.com/design/r9jCabuDPRSLar6flg27Rb/Untitled?node-id=1-58061&t=HqB6ubi7GlQzteGV-1"
-  },
+ 
   {
     id: 6,
     title: "TREK BOOKING",
@@ -75,16 +85,7 @@ export const projects: Project[] = [
     description: "Booking platform for treks and adventures.",
     image: "/projects/trek-booking.png",
     slug: "trek-booking",
-    figmaLink: "https://www.figma.com/design/r9jCabuDPRSLar6flg27Rb/Untitled?node-id=1-100356&t=HqB6ubi7GlQzteGV-1"
+    figmaLink: "https://www.figma.com/proto/r9jCabuDPRSLar6flg27Rb/Nikita-s-designs?node-id=1-95295&t=gG6AukKUXGPonjKy-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1"
   },
-   {
-    id: 11,
-    title: "PETER PANS",
-    category: "Hospitality & Leisure",
-    year: "2026",
-    description: "Personalized travel planning and concierge services.",
-    image: "/projects/peter-pans.png",
-    slug: "peter-pans",
-    figmaLink: "https://www.figma.com/design/r9jCabuDPRSLar6flg27Rb/Untitled?node-id=1-164637&t=RwDgt8EVLiMMXwV2-1"
-  },
+  
 ];
