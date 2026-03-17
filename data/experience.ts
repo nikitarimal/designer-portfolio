@@ -12,19 +12,19 @@ export const experience = [
       "Collaborating with cross-functional teams to deliver high-quality products"
     ]
   },
-  {
-    id: 2,
-    role: "Digital Marketing Specialist",
-    company: "Tcf Nepal",
-    location: "Kathmandu, Nepal",
-    period: "August 2025 – Present",
-    description: "Strategizing and executing digital growth through paid media.",
-    highlights: [
-      "Running ads & campaigns on Meta platforms to drive engagement",
-      "Optimizing conversion rates through data-driven marketing strategies",
-      "Managing brand presence and digital outreach programs"
-    ]
-  },
+  // {
+  //   id: 2,
+  //   role: "Digital Marketing Specialist",
+  //   company: "Tcf Nepal",
+  //   location: "Kathmandu, Nepal",
+  //   period: "August 2025 – Present",
+  //   description: "Strategizing and executing digital growth through paid media.",
+  //   highlights: [
+  //     "Running ads & campaigns on Meta platforms to drive engagement",
+  //     "Optimizing conversion rates through data-driven marketing strategies",
+  //     "Managing brand presence and digital outreach programs"
+  //   ]
+  // },
   {
     id: 3,
     role: "UI/UX & Graphics Designer",
