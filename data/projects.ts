@@ -23,16 +23,17 @@ export const projects: Project[] = [
     figmaLink: "https://freelancetravel.com/"
   },
   {
-    id: 11,
-    title: "PETER PANS",
-    category: "Hospitality & Leisure",
+    id: 2,
+    title: "REFFERO",
+    category: "Software as a Service",
     year: "2026",
-    description: "Personalized travel planning and concierge services.",
-    image: "/projects/peter-pans.png",
-    slug: "peter-pans",
-    websiteLink: "https://peterpans.com/",
-    figmaLink: "https://play.google.com/store/apps/details?id=com.peterpans.app"
+    description: "Innovation in referral and networking platforms.",
+    image: "/projects/reffero.png",
+    slug: "reffero",
+    websiteLink: "https://reffero.com/",
+    figmaLink: "https://www.figma.com/design/r9jCabuDPRSLar6flg27Rb/Untitled?node-id=1-9608&t=HqB6ubi7GlQzteGV-1"
   },
+ 
    {
     id: 5,
     title: "BALIYO VENTURES",
@@ -44,17 +45,6 @@ export const projects: Project[] = [
     websiteLink: "https://www.baliyoventures.com/",
     figmaLink: "https://www.baliyoventures.com/"
   },
-  // {
-  //   id: 2,
-  //   title: "REFFERO",
-  //   category: "Software as a Service",
-  //   year: "2026",
-  //   description: "Innovation in referral and networking platforms.",
-  //   image: "/projects/reffero.png",
-  //   slug: "reffero",
-  //   websiteLink: "https://reffero.com/",
-  //   figmaLink: "https://www.figma.com/design/r9jCabuDPRSLar6flg27Rb/Untitled?node-id=1-9608&t=HqB6ubi7GlQzteGV-1"
-  // },
   {
     id: 3,
     title: "SYLLABUSAI",
@@ -65,6 +55,27 @@ export const projects: Project[] = [
     slug: "syllabusai",
     figmaLink: "https://www.figma.com/design/r9jCabuDPRSLar6flg27Rb/Untitled?node-id=1-29971&t=HqB6ubi7GlQzteGV-1"
   },
+   {
+    id: 11,
+    title: "PETER PANS",
+    category: "Hospitality & Leisure",
+    year: "2026",
+    description: "Personalized travel planning and concierge services.",
+    image: "/projects/peter-pans.png",
+    slug: "peter-pans",
+    websiteLink: "https://peterpans.com/",
+    figmaLink: "https://play.google.com/store/apps/details?id=com.peterpans.app"
+  },
+  {
+    id: 12,
+    title: "Footsal Management System",
+    category: "Software as a Service",
+    year: "2026",
+    description: "Footsal Management System is a comprehensive platform for managing footsal operations, including bookings, payments, and player management.",
+    image: "/projects/footsal-dashboard.png",
+    slug: "footsal-management-system",
+    // figmaLink: "https://www.figma.com/design/r9jCabuDPRSLar6flg27Rb/Untitled?node-id=1-29971&t=HqB6ubi7GlQzteGV-1"
+  }
   // {
   //   id: 4,
   //   title: "SYANGDEN HOLIDAYS",
@@ -77,15 +88,26 @@ export const projects: Project[] = [
   //   figmaLink: "https://figma.com/file/placeholder4"
   // },
  
-  {
-    id: 6,
-    title: "TREK BOOKING",
-    category: "Travel & Tourism",
-    year: "2026",
-    description: "Booking platform for treks and adventures.",
-    image: "/projects/trek-booking.png",
-    slug: "trek-booking",
-    figmaLink: "https://www.figma.com/proto/r9jCabuDPRSLar6flg27Rb/Nikita-s-designs?node-id=1-95295&t=gG6AukKUXGPonjKy-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1"
-  },
+  // {
+  //   id: 6,
+  //   title: "TREK BOOKING",
+  //   category: "Travel & Tourism",
+  //   year: "2026",
+  //   description: "Booking platform for treks and adventures.",
+  //   image: "/projects/trek-booking.png",
+  //   slug: "trek-booking",
+  //   figmaLink: "https://www.figma.com/proto/r9jCabuDPRSLar6flg27Rb/Nikita-s-designs?node-id=1-95295&t=gG6AukKUXGPonjKy-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1"
+  // },
+
+  // {
+  //   id: 6,
+  //   title: "Reffero",
+  //   category: "Influencer Marketplace",
+  //   year: "2026",
+  //   description: "A platform connecting brands with influencers for collaboration and hiring. Creator dashboard and hiring workflow design.",
+  //   image: "/projects/reffero.png",
+  //   slug: "reffero",
+  //   figmaLink: "https://www.figma.com/proto/r9jCabuDPRSLar6flg27Rb/Nikita-s-designs?node-id=1-95295&t=gG6AukKUXGPonjKy-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1"
+  // },
   
 ];
