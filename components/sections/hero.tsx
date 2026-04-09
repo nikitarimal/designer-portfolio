@@ -66,7 +66,7 @@ export default function Hero() {
           </motion.p>
 
           <motion.a
-            href="#about"
+            href="#projects"
             className="inline-block px-10 py-4 border-2 border-white text-white font-semibold uppercase tracking-widest text-sm hover:bg-white hover:text-black transition-all duration-300"
             variants={itemVariants}
             whileHover={{ scale: 1.05 }}
