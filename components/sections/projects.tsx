@@ -70,11 +70,9 @@ export default function Projects() {
               className="group relative flex flex-col"
               variants={itemVariants}
             >
-              {/* Main Card linked to Figma */}
-              <a
-                href={project.figmaLink}
-                target="_blank"
-                rel="noopener noreferrer"
+              {/* Main Card linked to internal project page */}
+              <Link
+                href={`/projects/${project.slug}`}
                 className="rounded-[40px] border border-white/5 bg-[#0a0a0a] overflow-hidden p-3 md:p-4 transition-all duration-500 group-hover:border-white/10 group-hover:scale-[1.01]"
               >
                 {/* Image Holder */}
@@ -86,10 +84,10 @@ export default function Projects() {
                     className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-110"
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
-                  {/* Figma Overlay Indicator */}
+                  {/* Overlay Indicator */}
                   <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
                     <span className="bg-white text-black px-6 py-3 rounded-full text-xs font-black tracking-widest uppercase">
-                      View Project
+                      View Details
                     </span>
                   </div>
                 </div>
@@ -122,7 +120,7 @@ export default function Projects() {
                     </div>
                   </div>
                 </div>
-              </a>
+              </Link>
             </motion.div>
           ))}
         </motion.div>

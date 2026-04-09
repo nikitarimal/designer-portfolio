@@ -1,26 +1,48 @@
-export interface Project {
-  id: number;
-  title: string;
-  category: string;
-  year: string;
-  description: string;
-  image: string;
-  slug: string;
-  websiteLink?: string;
-  figmaLink?: string;
-}
+import { Project } from '@/lib/models/project_model';
 
 export const projects: Project[] = [
   {
     id: 1,
     title: "FREELANCE TRAVEL",
+    category: "Travel & Tour Booking",
+    year: "2026",
+    description: "Personalized travel planning and concierge services.",
+    image: "/projects/freelance-travel/hero.png",
+    slug: "freelance-travel",
+    websiteLink: "https://freelancetravel.com/",
+    figmaLink: "https://freelancetravel.com/",
+    role: "Lead UI/UX Designer",
+    timeline: "3 Months (2026)",
+    objective: "To create a seamless and personalized travel planning experience that connects travelers with expert concierge services, ensuring a stress-free journey from start to finish.",
+    challengesAndResearch: "The primary challenge was organizing complex travel data into an intuitive interface. Through competitive analysis and user interviews, we found that travelers often feel overwhelmed by the sheer volume of options and the lack of personalized recommendations.",
+    solutionsAndImpact: "A dedicated hospitality solution focused on simplifying the travel booking experience and providing seamless concierge support for travelers.",
+    techStack: ["React", "Next.js", "Tailwind CSS", "Framer Motion"],
+    moreImages: [
+      "/projects/freelance-travel/01.png",
+      "/projects/freelance-travel/02.png"
+    ],
+    caseStudyLink: "https://www.figma.com/proto/NhQqguFZrOwMVmEM4ci8zl/my-Case-studies?node-id=5-6206&t=ePcsvmmVQyIIlW6J-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=52%3A17856"
+  },
+  {
+    id: 11,
+    title: "PETER PANS",
     category: "Hospitality & Leisure",
     year: "2026",
     description: "Personalized travel planning and concierge services.",
-    image: "/projects/freelance-landing.png",
-    slug: "freelance-travel",
-    websiteLink: "https://freelancetravel.com/",
-    figmaLink: "https://freelancetravel.com/"
+    image: "/projects/peter-pans/hero.png",
+    slug: "peter-pans",
+    websiteLink: "https://peterpans.com/",
+    figmaLink: "https://play.google.com/store/apps/details?id=com.peterpans.app",
+    role: "Mobile App Designer",
+    timeline: "4 Months (2026)",
+    objective: "Developing a mobile-first travel concierge that provides real-time support and personalized itineraries for modern explorers.",
+    challengesAndResearch: "Mobile travel apps often suffer from poor offline performance and cluttered interfaces. We focused on 'offline-first' design patterns to ensure reliability even in remote locations.",
+    solutionsAndImpact: "A streamlined, intuitive mobile app providing travelers with reliable access to itineraries and navigation regardless of connectivity.",
+    techStack: ["Flutter", "Dart", "Google Maps API", "Firebase"],
+    moreImages: [
+      "/projects/peter-pans/hero.png"
+      ,"/projects/peter-pans/01.png"
+    ]
   },
   {
     id: 2,
@@ -28,22 +50,40 @@ export const projects: Project[] = [
     category: "Software as a Service",
     year: "2026",
     description: "Innovation in referral and networking platforms.",
-    image: "/projects/reffero.png",
+    image: "/projects/reffero/hero.png",
     slug: "reffero",
     websiteLink: "https://reffero.com/",
-    figmaLink: "https://www.figma.com/design/r9jCabuDPRSLar6flg27Rb/Untitled?node-id=1-9608&t=HqB6ubi7GlQzteGV-1"
+    figmaLink: "https://www.figma.com/design/r9jCabuDPRSLar6flg27Rb/Untitled?node-id=1-9608&t=HqB6ubi7GlQzteGV-1",
+    role: "Product Designer",
+    timeline: "6 Months (2026)",
+    objective: "Reimagining the referral ecosystem for modern businesses. Reffero aims to build a trust-based networking platform that simplifies the referral process while maximizing conversion rates.",
+    challengesAndResearch: "Building a platform that users genuinely trust was the biggest hurdle. Our research indicated that existing referral platforms often felt 'spammy'. We needed to focus on authenticity and clear incentives.",
+    solutionsAndImpact: "Integration of a 'Trust-Score' algorithm and a transparent reward system to foster an authentic, high-conversion referral ecosystem for modern businesses.",
+    techStack: ["Figma", "React Native", "Firebase", "Node.js"],
+    moreImages: [
+      "/projects/reffero/01.png",
+      "/projects/reffero/02.png"
+    ]
   },
- 
-   {
+  {
     id: 5,
     title: "BALIYO VENTURES",
     category: "Venture Capital",
     year: "2026",
     description: "Strategic investments and venture building.",
-    image: "/projects/baliyo-landing.png",
+    image: "/projects/baliyo-ventures/hero.png",
     slug: "baliyo-ventures",
     websiteLink: "https://www.baliyoventures.com/",
-    figmaLink: "https://www.baliyoventures.com/"
+    figmaLink: "https://www.baliyoventures.com/",
+    role: "Brand & UI Designer",
+    timeline: "4 Months (2026)",
+    objective: "To establish a strong digital presence for a forward-thinking venture capital firm, showcasing their portfolio and commitment to nurturing innovative startups.",
+    challengesAndResearch: "VC websites often feel cold and corporate. We wanted to blend professionalism with an approachable, founder-friendly aesthetic. Research consistently highlighted that founders look for personal connection alongside capital.",
+    solutionsAndImpact: "A professional yet approachable digital presence that emphasizes human connection and portfolio excellence, simplifying the engagement process for founders.",
+    techStack: ["Webflow", "Motion Design", "Adobe Creative Suite"],
+    moreImages: [
+      "/projects/baliyo-ventures/hero.png"
+    ]
   },
   {
     id: 3,
@@ -51,63 +91,37 @@ export const projects: Project[] = [
     category: "Education Technology",
     year: "2026",
     description: "AI-powered educational infrastructure.",
-    image: "/projects/syllabusai.png",
+    image: "/projects/syllabusai/hero.png",
     slug: "syllabusai",
-    figmaLink: "https://www.figma.com/design/r9jCabuDPRSLar6flg27Rb/Untitled?node-id=1-29971&t=HqB6ubi7GlQzteGV-1"
+    figmaLink: "https://www.figma.com/design/r9jCabuDPRSLar6flg27Rb/Untitled?node-id=1-29971&t=HqB6ubi7GlQzteGV-1",
+    role: "UX Researcher & UI Designer",
+    timeline: "5 Months (2026)",
+    objective: "Leveraging AI to automate the creation and management of educational syllabi, allowing educators to focus more on teaching and less on administrative tasks.",
+    challengesAndResearch: "AI can be intimidating for educators. User research showed that many were concerned about the 'black box' nature of AI. We needed an interface that made AI feel like a helpful assistant, not a replacement.",
+    solutionsAndImpact: "An interactive, transparent AI-assisted builder that automates administrative tasks, allowing educators to focus more on instructional quality and student engagement.",
+    techStack: ["OpenAI API", "Next.js", "PostgreSQL", "Tailwind CSS"],
+    moreImages: [
+      "/projects/syllabusai/hero.png"
+    ]
   },
-   {
-    id: 11,
-    title: "PETER PANS",
-    category: "Hospitality & Leisure",
-    year: "2026",
-    description: "Personalized travel planning and concierge services.",
-    image: "/projects/peter-pans.png",
-    slug: "peter-pans",
-    websiteLink: "https://peterpans.com/",
-    figmaLink: "https://play.google.com/store/apps/details?id=com.peterpans.app"
-  },
+  
   {
     id: 12,
     title: "Footsal Management System",
     category: "Software as a Service",
     year: "2026",
-    description: "Footsal Management System is a comprehensive platform for managing footsal operations, including bookings, payments, and player management.",
-    image: "/projects/footsal-dashboard.png",
+    description: "Comprehensive platform for managing footsal operations.",
+    image: "/projects/footsal-management-system/hero.png",
     slug: "footsal-management-system",
-    // figmaLink: "https://www.figma.com/design/r9jCabuDPRSLar6flg27Rb/Untitled?node-id=1-29971&t=HqB6ubi7GlQzteGV-1"
+    role: "UI/UX Designer",
+    timeline: "3 Months (2026)",
+    objective: "To create a robust management system that automates bookings, payments, and player management for footsal centers.",
+    challengesAndResearch: "Center managers were struggling with manual, error-prone booking systems. Research showed that double-bookings were the most common pain point.",
+    solutionsAndImpact: "Implementation of a real-time synchronization engine and integrated payment solutions to eliminate booking conflicts and streamline administrative operations.",
+    techStack: ["React", "Express", "MongoDB", "Redux"],
+    moreImages: [
+      "/projects/footsal-management-system/01.png",
+      "/projects/footsal-management-system/02.png"
+    ]
   }
-  // {
-  //   id: 4,
-  //   title: "SYANGDEN HOLIDAYS",
-  //   category: "Travel & Tourism",
-  //   year: "2026",
-  //   description: "Premium holiday experiences in the Himalayas.",
-  //   image: "/projects/syangden-holidays.png",
-  //   slug: "syangden-holidays",
-  //   websiteLink: "https://syangdenholidays.com/",
-  //   figmaLink: "https://figma.com/file/placeholder4"
-  // },
- 
-  // {
-  //   id: 6,
-  //   title: "TREK BOOKING",
-  //   category: "Travel & Tourism",
-  //   year: "2026",
-  //   description: "Booking platform for treks and adventures.",
-  //   image: "/projects/trek-booking.png",
-  //   slug: "trek-booking",
-  //   figmaLink: "https://www.figma.com/proto/r9jCabuDPRSLar6flg27Rb/Nikita-s-designs?node-id=1-95295&t=gG6AukKUXGPonjKy-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1"
-  // },
-
-  // {
-  //   id: 6,
-  //   title: "Reffero",
-  //   category: "Influencer Marketplace",
-  //   year: "2026",
-  //   description: "A platform connecting brands with influencers for collaboration and hiring. Creator dashboard and hiring workflow design.",
-  //   image: "/projects/reffero.png",
-  //   slug: "reffero",
-  //   figmaLink: "https://www.figma.com/proto/r9jCabuDPRSLar6flg27Rb/Nikita-s-designs?node-id=1-95295&t=gG6AukKUXGPonjKy-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1"
-  // },
-  
 ];
