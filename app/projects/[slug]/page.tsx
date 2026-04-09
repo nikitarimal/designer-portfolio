@@ -73,28 +73,6 @@ export default function ProjectDetail({ params }: { params: { slug: string } }) 
                 {project.title}
               </h1>
 
-              {/* <div className="flex flex-wrap gap-4">
-                {project.websiteLink && (
-                  <a 
-                    href={project.websiteLink} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-white text-black px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-white/90 transition-all group"
-                  >
-                    View Website <ExternalLink size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                  </a>
-                )}
-                {(project.caseStudyLink || project.figmaLink) && (
-                  <a 
-                    href={project.caseStudyLink || project.figmaLink} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md text-white border border-white/20 px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-white/20 transition-all group"
-                  >
-                    View Case Study <Figma size={14} className="group-hover:rotate-12 transition-transform" />
-                  </a>
-                )}
-              </div> */}
                <div className="flex flex-wrap gap-4 mt-12">
                 {project.websiteLink && (
                   <a 
@@ -193,30 +171,6 @@ export default function ProjectDetail({ params }: { params: { slug: string } }) 
                 {project.objective || project.description}
               </p>
 
-              {/* <div className="flex flex-wrap gap-4 mt-12">
-                {project.websiteLink && (
-                  <a 
-                    href={project.websiteLink} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 rounded-full text-sm font-bold uppercase tracking-wider hover:scale-105 transition-all shadow-xl shadow-primary/20 group"
-                  >
-                    View Website 
-                    <ExternalLink size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                  </a>
-                )}
-                {project.caseStudyLink && (
-                  <a 
-                    href={project.caseStudyLink} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 border border-border bg-card/50 backdrop-blur-sm px-8 py-4 rounded-full text-sm font-bold uppercase tracking-wider hover:bg-card hover:scale-105 transition-all shadow-xl group"
-                  >
-                    View Case Study 
-                    <ExternalLink size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                  </a>
-                )}
-              </div> */}
             </div>
           </div>
 
