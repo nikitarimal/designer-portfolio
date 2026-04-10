@@ -11,10 +11,18 @@ import { notFound } from 'next/navigation'
 import React from 'react'
 
 export default function ProjectDetail({ params }: { params: { slug: string } }) {
-  // NOTE: params is async in Next.js 15+, but let's assume it's sync for now or use React.use()
-  // Since this is a client component, we might need to handle it.
   const resolvedParams = React.use(params as any) as { slug: string };
   const project = projects.find(p => p.slug === resolvedParams.slug)
+
+  // Force scroll to top instantly to override any Next.js scroll restoration flash
+  React.useLayoutEffect(() => {
+    // Setting scrollRestoration to manual prevents the browser from fighting us
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+    // 'instant' forces it without any smooth sliding
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  }, []);
 
   if (!project) {
     notFound()
@@ -35,9 +43,10 @@ export default function ProjectDetail({ params }: { params: { slug: string } }) 
           className="absolute inset-0"
         >
           <Image
-            src={project.image}
+            src={project.cover}
             alt={project.title}
             fill
+            objectPosition='top'
             className="object-cover object-center brightness-75"
             priority
           />
@@ -74,25 +83,29 @@ export default function ProjectDetail({ params }: { params: { slug: string } }) 
               </h1>
 
                <div className="flex flex-wrap gap-4 mt-12">
-                {project.websiteLink && (
-                  <a 
-                    href={project.websiteLink} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 rounded-full text-sm font-bold uppercase tracking-wider hover:scale-105 transition-all shadow-xl shadow-primary/20 group"
-                  >
-                    View Website 
-                    <ExternalLink size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                  </a>
-                )}
+               
                 {project.caseStudyLink && (
                   <a 
                     href={project.caseStudyLink} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 border border-border bg-card/50 backdrop-blur-sm px-8 py-4 rounded-full text-sm font-bold uppercase tracking-wider hover:bg-card hover:scale-105 transition-all shadow-xl group"
+                    className="
+                    inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 rounded-full text-sm font-bold uppercase tracking-wider hover:scale-105 transition-all shadow-xl shadow-primary/20 group
+                    "
                   >
                     View Case Study 
+                    <ExternalLink size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                  </a>
+                )}
+
+                 {project.websiteLink && (
+                  <a 
+                    href={project.websiteLink} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-3 border border-border bg-card/50 backdrop-blur-sm px-8 py-4 rounded-full text-sm font-bold uppercase tracking-wider hover:bg-card hover:scale-105 transition-all shadow-xl group"
+                  >
+                    View Website 
                     <ExternalLink size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                   </a>
                 )}
@@ -182,9 +195,10 @@ export default function ProjectDetail({ params }: { params: { slug: string } }) 
             className="relative aspect-video w-full rounded-xl overflow-hidden mb-32 shadow-2xl border border-white/5"
           >
             <Image
-              src={project.image}
+              src={project.main}
               alt="Process Image"
               fill
+              objectPosition='top'
               className="object-cover"
             />
           </motion.div>
@@ -217,48 +231,51 @@ export default function ProjectDetail({ params }: { params: { slug: string } }) 
             </div>
           </div>
 
-          {/* Visual Showcase - Immersive Gallery */}
+          {/* Visual Showcase - Premium Presentation */}
           {project.moreImages && project.moreImages.length > 0 && (
-            <div className="mt-40 space-y-20">
-              <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-border pb-10 gap-4">
+            <div className="mt-40 space-y-20 relative">
+              {/* Subtle ambient light for the whole section */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
+
+              <div className="relative z-10 flex flex-col md:flex-row md:items-end justify-between border-b border-white/10 pb-10 gap-4">
                 <div>
                   <h3 className="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-none mb-4">
-                    Visual <br /><span className="text-primary">Showcase</span>
+                    Visual <br /><span className="text-primary drop-shadow-[0_0_30px_rgba(255,255,255,0.2)]">Showcase</span>
                   </h3>
-                  <p className="text-muted-foreground text-xs uppercase tracking-[0.4em] font-bold">Project gallery</p>
+                  <p className="text-muted-foreground text-xs uppercase tracking-[0.4em] font-bold">
+                    Project Gallery
+                  </p>
                 </div>
                 <div className="text-right hidden md:block">
-                  <span className="text-6xl font-black text-white/5 leading-none tabular-nums">
+                  <span className="text-6xl font-black text-white/5 leading-none tabular-nums tracking-tighter">
                     {project.moreImages.length.toString().padStart(2, '0')}
                   </span>
                 </div>
               </div>
               
-              <div className="space-y-12 md:space-y-20">
-                {project.moreImages.map((img, idx) => (
+              <div className="relative z-10 flex flex-col gap-12 md:gap-24 items-center">
+                {project.moreImages.map((img, idx) => {
+                  const isMobile = img.includes('/mobile/');
+                  return (
                   <motion.div 
                     key={idx}
-                    initial={{ opacity: 0, y: 40 }}
+                    initial={{ opacity: 0, y: 60 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                    viewport={{ once: true }}
-                    className="relative aspect-video w-full rounded-xl overflow-hidden group shadow-2xl border border-white/5"
+                    transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    className={`relative w-full rounded-xl md:rounded-2xl overflow-hidden bg-white/5 border border-white/10 shadow-[0_0_100px_-20px_rgba(255,255,255,0.05)] transition-all duration-700 hover:border-white/20 hover:shadow-[0_0_150px_-20px_rgba(255,255,255,0.1)] ${isMobile ? 'max-w-sm' : ''}`}
                   >
                     <Image
                       src={img}
-                      alt={`${project.title} detail ${idx + 1}`}
-                      fill
-                      className="object-cover object-top group-hover:scale-105 transition-transform duration-1000"
+                      alt={`${project.title} showcase plate ${idx + 1}`}
+                      width={0}
+                      height={0}
+                      sizes="100vw"
+                      style={{ width: '100%', height: 'auto' }}
+                      className="w-full h-auto"
                     />
-                    
-                    {/* Subtle number */}
-                    <div className="absolute bottom-6 left-6 opacity-0 group-hover:opacity-100 transition-opacity">
-                      <span className="text-white/20 font-black text-2xl tracking-tighter">
-                        {(idx + 1).toString().padStart(2, '0')}
-                      </span>
-                    </div>
                   </motion.div>
-                ))}
+                )})}
               </div>
             </div>
           )}
@@ -284,7 +301,7 @@ export default function ProjectDetail({ params }: { params: { slug: string } }) 
                   >
                     <div className="relative aspect-video overflow-hidden">
                       <Image
-                        src={proj.image}
+                        src={proj.main}
                         alt={proj.title}
                         fill
                         className="object-cover brightness-75 group-hover:brightness-100 group-hover:scale-110 transition-all duration-700"

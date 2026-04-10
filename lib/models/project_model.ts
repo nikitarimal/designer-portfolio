@@ -4,7 +4,8 @@ export interface Project {
   category: string;
   year: string;
   description: string;
-  image: string; // Hero image
+  cover: string; // Hero image
+  main: string;
   slug: string;
   websiteLink?: string;
   figmaLink?: string;

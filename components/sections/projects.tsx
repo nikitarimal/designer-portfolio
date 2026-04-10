@@ -73,12 +73,13 @@ export default function Projects() {
               {/* Main Card linked to internal project page */}
               <Link
                 href={`/projects/${project.slug}`}
+                scroll={false}
                 className="rounded-[40px] border border-white/5 bg-[#0a0a0a] overflow-hidden p-3 md:p-4 transition-all duration-500 group-hover:border-white/10 group-hover:scale-[1.01]"
               >
                 {/* Image Holder */}
                 <div className="relative aspect-[4/3] rounded-[32px] overflow-hidden bg-zinc-900 mb-4 md:mb-6">
                   <Image
-                    src={project.image}
+                    src={project.main}
                     alt={project.title}
                     fill
                     className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-110"

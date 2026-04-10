@@ -67,6 +67,10 @@ export default function Hero() {
 
           <motion.a
             href="#projects"
+            onClick={(e) => {
+              e.preventDefault();
+              document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' });
+            }}
             className="inline-block px-10 py-4 border-2 border-white text-white font-semibold uppercase tracking-widest text-sm hover:bg-white hover:text-black transition-all duration-300"
             variants={itemVariants}
             whileHover={{ scale: 1.05 }}
