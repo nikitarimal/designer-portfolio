@@ -62,7 +62,8 @@ export const projects: Project[] = [
     techStack: ["Figma", "React Native", "Firebase", "Node.js"],
     moreImages: [
       "/projects/reffero/01.png",
-      "/projects/reffero/02.png"
+      "/projects/reffero/02.png",
+      "/projects/reffero/03.png"
     ]
   },
   {
